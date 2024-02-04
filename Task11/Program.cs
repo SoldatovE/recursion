@@ -5,25 +5,26 @@
  Использовать рекурсию, не использовать циклы.*/
 
 
-Console.Write("Введите натуральное  число, для подсчета в промежутке от М до N:  ");
-int integerN = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите натуральное  число  для подсчета в промежутке: M =  ");
+int integerM = Convert.ToInt32(Console.ReadLine());
 
-//int startValM = 1; // 1вариант решения
+//int startValN = 1; // 1вариант решения
 
-Console.Write("Введите натуральное  число N, для подсчета в промежутке от М до N:  ");
-int startValМ = Convert.ToInt32(Console.ReadLine()); // 2вариант решения(не могу понять, как сделать, чтобы отрицательные цыфры не выводил,)
+Console.Write("Введите натуральное  число  для подсчета в промежутке: N =  ");
+int startValN = Convert.ToInt32(Console.ReadLine()); // 2вариант решения(не могу понять, как сделать, чтобы отрицательные цыфры не выводил,)
 
-void ShowNumbers(int startValМ, int end)
+void ShowNumbers(int startValN, int end)
 {
-    if (startValМ == end)
+    if (startValN == end)
     {
-        Console.Write(startValМ);
+        Console.Write(startValN);
         return;
     }
 
-    Console.Write(startValМ + " ");
-    ShowNumbers(startValМ + 1, end);
+    Console.Write(startValN + " ");
+    ShowNumbers(startValN + 1, end);
 
 }
-ShowNumbers(integerN, startValМ); // 2вариант решения
+System.Console.Write("Натуральные числа в промежутке от M до N: ");
+ShowNumbers(integerM, startValN); // 2вариант решения
 //ShowNumbers(1, integerN); //1вариант решения
